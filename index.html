@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Creepy Liquor</title>
+    <meta
+      name="description"
+      content="A dusty Victorian liquor shelf photo with bloodshot animated eyes that follow the cursor."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;700&family=IM+Fell+English:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="scene">
+      <header class="title-card">
+        <p class="eyebrow">Victorian rotgut, preserved badly</p>
+        <h1>The Unsettling Shelf</h1>
+      </header>
+
+      <section class="photo-stage" aria-label="Liquor shelf with animated eyes">
+        <div class="photo-frame" id="photo-frame">
+          <img
+            class="shelf-backplate"
+            src="./assets/shelf-photo.jpeg"
+            alt="Dusty old liquor bottles with unsettling faces"
+          />
+          <div class="eye-layer" id="eye-layer"></div>
+          <svg
+            class="shelf-mask-svg"
+            viewBox="0 0 1024 559"
+            preserveAspectRatio="none"
+            aria-hidden="true"
+          >
+            <defs>
+              <mask id="eye-cut-mask">
+                <rect width="1024" height="559" fill="white" />
+                <ellipse cx="189" cy="333" rx="24" ry="11" fill="black" />
+                <ellipse cx="248" cy="328" rx="24" ry="11" fill="black" />
+                <ellipse cx="348" cy="287" rx="21" ry="10" fill="black" />
+                <ellipse cx="403" cy="287" rx="20" ry="9" fill="black" />
+                <ellipse cx="589" cy="356" rx="19" ry="9" fill="black" />
+                <ellipse cx="637" cy="354" rx="18" ry="8" fill="black" />
+                <ellipse cx="773" cy="350" rx="22" ry="10" fill="black" />
+                <ellipse cx="830" cy="350" rx="21" ry="10" fill="black" />
+              </mask>
+            </defs>
+            <image
+              href="./assets/shelf-mask-original.png"
+              width="1024"
+              height="559"
+              preserveAspectRatio="none"
+              mask="url(#eye-cut-mask)"
+            />
+          </svg>
+          <div class="film-grain"></div>
+          <div class="vignette"></div>
+        </div>
+      </section>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
